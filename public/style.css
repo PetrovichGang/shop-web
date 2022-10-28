@@ -1,0 +1,94 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Century Gothic';
+}
+
+h1 { margin: 0 auto 0 0 }
+h2, h3, h4, body { margin: 0 }
+h4 { font-size: 150% }
+
+i, .opacity { opacity: 0.6 }
+.h-panel *, .grow { flex-grow: 1 }
+.preview img { border-radius: 8px }
+a.preview { margin-bottom: 8px }
+main, span, header a[here], .h-panel, form, section, header, article, label { display: flex }
+section, header, main { gap: 16px }
+form, .sidebar, article, .order label { flex-direction: column }
+input { border: 0 }
+.grow { flex-wrap: wrap }
+
+.order label {
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+input:not([type=checkbox]) {
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 2px solid
+}
+
+header, main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: auto;
+}
+
+header {
+    height: 108px;
+    align-items: center;
+}
+
+a, [type=submit] {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.h-panel {
+    margin-top: 8px;
+    gap: 8px;
+    align-items: center;
+}
+
+header a[here], .h-panel a, .h-panel input, [type=submit] {
+    font-family: inherit;
+    color: #fff;
+    background: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+b {
+    padding: 4px 12px;
+    background: #dedede;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sidebar {
+    width: 280px;
+    padding: 20px;
+    border: 4px #000 solid;
+    border-radius: 8px;
+}
+
+.center-main .icon {
+    font-size: 88px;
+    font-family: monospace;
+}
+
+.center-main {
+    display: flex;
+    height: calc(100vh - 216px);
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
