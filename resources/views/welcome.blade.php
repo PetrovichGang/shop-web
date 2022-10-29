@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
+@extends('layout')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Магазин</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+@section('title', 'Главная')
 
-<body>
-    <header>
-        <h1>VELOSIPED</h1>
-        <a href="/" here>Главная</a>
-        <a href="/cart">Корзина</a>
-    </header>
-
-    <main>
+@section('main')
     <section class="sidebar">
         <form action="/">
             <input type="text" name="q" value="{{ $_GET['q'] ?? '' }}" placeholder="Поиск..."><br>
             <h3>Производители</h3>
             @foreach ($brands as $b)
                 <label>
-                    <input type="checkbox" name="b[]" value="{{ $b->id }}" @checked(in_array($b->id, $_GET['b'] ?? []))
+                    <input type="checkbox" name="b[]" value="{{ $b->id }}" @checked(in_array($b->id, $_GET['b'] ?? []))>
                     {{ $b->name }}
                 </label>
             @endforeach
@@ -30,8 +17,7 @@
             <h3>Тип</h3>
             @foreach (['Горный', 'Женский', 'Детский'] as $t)
                 <label>
-                    <input type="checkbox" name="t[]" value="{{ $t }}"
-                        {!! in_array($t, $_GET['t'] ?? []) ? 'checked' : '' !!}>
+                    <input type="checkbox" name="t[]" value="{{ $t }}" @checked(in_array($t, $_GET['t'] ?? []))>
                     {{ $t }}
                 </label>
             @endforeach
@@ -65,7 +51,4 @@
         </article>
     @endforeach
     </section>
-    </main>
-</body>
-
-</html>
+@endsection

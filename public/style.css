@@ -3,7 +3,7 @@ body {
     font-family: 'Century Gothic';
 }
 
-h1 { margin: 0 auto 0 0 }
+header>div, h1 { margin: 0 auto 0 0 }
 h2, h3, h4, body { margin: 0 }
 h4 { font-size: 150% }
 
@@ -11,7 +11,7 @@ i, .opacity { opacity: 0.6 }
 .h-panel *, .grow { flex-grow: 1 }
 .preview img { border-radius: 8px }
 a.preview { margin-bottom: 8px }
-main, span, header a[here], .h-panel, form, section, header, article, label { display: flex }
+main, span, header a[checked], .h-panel, form, section, header, article, label { display: flex }
 section, header, main { gap: 16px }
 form, .sidebar, article, .order label { flex-direction: column }
 input { border: 0 }
@@ -54,7 +54,7 @@ a, [type=submit] {
     align-items: center;
 }
 
-header a[here], .h-panel a, .h-panel input, [type=submit] {
+header a[checked], .h-panel a, .h-panel input, [type=submit] {
     font-family: inherit;
     color: #fff;
     background: #000;
@@ -85,6 +85,7 @@ b {
 
 .center-main {
     display: flex;
+    width: 100%;
     height: calc(100vh - 216px);
     flex-direction: column;
     align-content: center;

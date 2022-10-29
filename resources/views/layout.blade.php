@@ -10,13 +10,16 @@
 
 <body>
     <header>
-        <h1>VELOSIPED: @yield('title')</h1>
+        <div>
+            <h1><a href="/">VELOSIPED</a></h1>
+            <span>@yield('title')</span>
+        </div>
         <a href="/" @checked(Request::is('/'))>Главная</a>
-        <a href="/cart" @checked(Request::is('/cart'))>Корзина</a>
+        <a href="/cart" @checked(Request::is('cart'))>Корзина</a>
     </header>
 
     <main>
-        @section('main')
+        @yield('main')
     </main>
 </body>
 

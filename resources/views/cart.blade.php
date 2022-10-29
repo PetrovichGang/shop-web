@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
+@extends('layout')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Корзина</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+@section('title', 'Корзина')
 
-<body>
-    <header>
-        <h1>VELOSIPED: Корзина</h1>
-        <a href="/">Главная</a>
-        <a href="/cart" here>Корзина</a>
-    </header>
-    <main>
+@section('main')
         <section class="grow">
             @foreach ($products as $p)
                 <article>
@@ -69,7 +57,4 @@
                 </div>
             </form>
         </section>
-    </main>
-</body>
-
-</html>
+@endsection
